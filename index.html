@@ -1,26 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <title>Project 1</title>
+  <title>Tri Dev </title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/foundation.scss">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <style type="text/css">
-  
-  </style>
-  
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cinzel|Play" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+
 </head>
 
-<body>
+<body id="body">
+
+    <div class="jumbotron-2" id="jumbo1" >
+        <div class="container">
+            <h1 class="display-4">Tri Dev   <img src="assets/images/red_note.png" </h1>
+        </div> 
+    </div>
+    <div class="jumbotron-2" id="jumbo2" >
+            <h2 class="lead" id="jumbo2_text" >Connect with Lyrics & Music!</h2>
+            <span id="nav" style="font-size:25px;cursor:pointer" onclick="openNav()" class="fas fa-chevron-circle-down">
+                         Menu
+            </span>
+        <a href="#search">
+            <i id="search-icon" class="fas fa-search fa-2x" > Search</i>
+
+        </a>
+    </div> 
+
+      <!-- Search Form -->
+      <div id="search"> 
+        <span class="close">X</span>
+        <form role="search" id="searchform" action="/search" method="get">
+          <input value="" name="q" type="search" placeholder="type to search"/>
+        </form>
+      </div>
+        
+<div id="myNav" class="overlay">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <div class="overlay-content">
+   <a href="#">About</a>
+   <a href="#" id="search-nav">Search</a>
+   <a href="#">Clients</a>
+   <a href="#">Contact</a>
+ </div>
+</div>
 
 
+<script>
+function openNav() {
+   document.getElementById("myNav").style.width = "100%";
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js">
+function closeNav() {
+   document.getElementById("myNav").style.width = "0%";
+}
+function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+
+</script>
+   
+</body>
+</html>
+
+
       
+
+      
+ 
+  
     
-    </script>
+    
+    
+
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/project.js"></script>
   
 </body>
 
