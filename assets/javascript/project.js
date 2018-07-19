@@ -45,7 +45,7 @@ dataRef.ref().push(newArtistSearch);
     console.log(artistSearch);
 
 
-var queryURL = "https://api.audd.io/?method=findLyrics&q=" + artistSearch +  "&api_token=f846db22eaf81cb3e7a79d0af9df399c"
+var queryURL = "https://api.audd.io/?method=findLyrics&q=" + artistSearch 
 
 $.ajax({
   url: queryURL,
@@ -58,26 +58,31 @@ console.log(response.result[0].lyrics);
 
 for (var i = 0; i < response.result.length; i++) {
 
-var ourLyrics = response.result[i].lyrics;
-var ourSongs = response.result[i].full_title;
+    var ourLyrics = response.result[i].lyrics;
+    var ourSongs = response.result[i].full_title;
 
 
 
+    //This creates Lyric button dynamically
+    var lyricBtn = $('<button id="lyricBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong'+ [i] + '" > Lyrics </button>')
 
-var lyricBtn = $('<button id="lyricBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong'+ [i] + '" > Lyrics </button>')
+    var modalBtn = $('<div class="modal fade" id="exampleModalLong'+ [i] + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <h5 class="modal-title" id="exampleModalLongTitle">LYRICS</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div> <div id="insideBtn' + [i] + '" class="modal-body">' + ourLyrics + '</div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> ')
 
-var modalBtn = $('<div class="modal fade" id="exampleModalLong'+ [i] + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <h5 class="modal-title" id="exampleModalLongTitle">LYRICS</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div> <div id="insideBtn' + [i] + '" class="modal-body">' + ourLyrics + '</div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> ')
 
-$("#songs").append('<br/>' + ourSongs + "<br/>")
-$("#songs").append(modalBtn)
-$("#songs").append(lyricBtn)
-
+    //this creates card to put lyric button and song title
+    var newLi = $(' <li class="list-group-item" style="background-color=transparent"></li>')
+    newLi.append('<br/>' + ourSongs + "<br/>")
+        .append(lyricBtn)
+        .append(modalBtn)
+        
+    $('#list-group').append(newLi)
 
   }  
 });
 
 
 $("#lyricBtn").show()
+
 
 
 
