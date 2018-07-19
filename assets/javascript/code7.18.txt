@@ -96,11 +96,40 @@ $.ajax({
       //creating link to youtube//
       console.log(videoID);
       
-      //create link to youtube
       var createYoutubeLink = $('<a target="_blank" href="https://www.youtube.com/watch?v=' + videoID + '"> Top Video </a>');
       //appending div to the page//
-    $("#songs").append(createYoutubeLink);
+
+      $("#songs").append(createYoutubeLink);
+      
+  //console.log(videoID);
+
+  //checking to see if video is available//
+  var videoStatus = 'https://www.googleapis.com/youtube/v3/videos?id=VIDEOID&part=status&key=AIzaSyA1cXXxMTZqpq24jIa7rz0UQW5DbhSQ1bs'
+  //console.log(videoStatus);
+
+/* for each (videoStatus){
+      $.ajax({
+          url: youtubeURL,
+          method: "GET"
+      }).then(function(status) {
+          console.log(status);
+          
       });
+  } */ 
+  
+//   var vidsrc = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoID + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+//       console.log(vidsrc);
+//       console.log(response)
+  
+//       $("#submitBtn").append(vidsrc);
+      
+      
+  });
+
+  
+
+
+ 
 
 });
 
