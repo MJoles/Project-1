@@ -143,75 +143,10 @@ body {
  }
 }
 
-@keyframes notes {
-    0% {
-      font-size: 25px;
-      transform:translate(0, 0);
-      opacity: 0; 
-    }
-    50% {
-      opacity: 1; 
-    }
-    100% {
-      font-size: 60px;
-      transform: translate(50px, -100px);
-      opacity: 0; 
-    }
-  }
-  .muzieknootjes{
-    display: block;
-    margin: 100px auto;
-    position: relative;
-    width: 200px;
-    height: 60px;
-    border: 0px solid #000
-  }
-  
-  .noot-1 {
-    top: 60px;
-    left: 30px;
-    transform-origin:0 0;
-    animation: notes 2s infinite linear .5s;
-    color: green;
-    
-  }
-  
-  .noot-1:hover{
-    animaton-play-state: running;
-  }
-  
-  .noot-2 {
-    top: 30px;
-    left: 90px;
-    animation: notes 2s infinite linear 1s;
-    color: red;
-  }
-  
-  .noot-3 {
-    top: 60px;
-    left: 10px;
-    animation: notes 2s infinite linear 1.5s;
-    color: blue;
-  }
-  
-  .noot-4 {
-    top: 30px;
-    left: 100px;
-    animation: notes 2s infinite linear 2s;
-    color: black;
-  }
-  
-  
-  .noot-1,
-  .noot-2,
-  .noot-3,
-  .noot-4{
-    position: absolute;
-    font-size: 35px;
-    opacity: 0;
-    
-  }
-  
-  
+.card {
+  background-color: transparent;
+}
 
-
+.list-group-item {
+  background-color: transparent;
+}
