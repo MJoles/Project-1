@@ -104,59 +104,6 @@ height: 10cm;
 background-color: transparent; 
 }
 
-#crossfade {
-  position:relative;
-
-} 
-
-.one, .two, .three, .four{
-
-  height: 5cm;
-  width: 5cm;
-}
-
-.five, .six, .seven, .eight{
-  height: 5cm;
-  width: 5cm;
-}
-
-#crossfade {
-  position: relative;
-}
-
-#crossfade img {
-	position: absolute;
-}
-
-#crossfade img {
-  position:absolute;
-  left:0;
-  -webkit-animation-name: fade;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-  animation-name: fade;
-  animation-iteration-count: infinite;
-  animation-duration: 6s;
-}
-
-@-webkit-keyframes fade {
-  0% {opacity: 0;}
-  20% {opacity: 1;}
-  33% {opacity: 1;}
-  53% {opacity: 0;}
-  100% {opacity: 0;}
-}
-@keyframes fade {
-  0% {opacity: 0;}
-  20% {opacity: 1;}
-  33% {opacity: 1;}
-  53% {opacity: 0;}
-  100% {opacity: 0;}
-}
-
-#crossfade img.top:hover {
-  opacity:0;
-}
 
 #youtubeBtn{
 
