@@ -1,57 +1,25 @@
 body {
 	width: 100wh;
 	height: 90vh;
-	color: #fff;
-	background: linear-gradient(-45deg, gray, black, #c1d0c3,#343d46);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+  color: #fff;
+  background: url("../images/background.jpg");
+  margin: auto;
+  background-size: cover;
+	background-size: 90%;
+
 }
 
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
+#pic{
 
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+  width: 45px;
+  
 }
 
 #jumbo1 {
     width: 37% ;
     color: red;
     font-family: 'Cinzel', serif;
-
-
-
+    text-shadow: 2px 2px 4px white;
 }
 #jumbo2 {
     float: right;
@@ -63,14 +31,6 @@ body {
     outline-style: double;
     outline-color:white;
     font-family: 'Cinzel', serif;
-    
-
-
-    animation-name: example;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-
 } 
 
 
@@ -93,46 +53,6 @@ body {
     color:white;
 }
 
-.overlay {
-   height: 100%;
-   width: 0;
-   position: fixed;
-   z-index: 1;
-   top: 0;
-   left: 0;
-   background-color: rgb(0,0,0);
-   background-color: rgba(0,0,0, 0.9);
-   overflow-x: hidden;
-   transition: 0.5s;
-}
-
-.overlay-content {
-   position: relative;
-   top: 25%;
-   width: 100%;
-   text-align: center;
-   margin-top: 30px;
-}
-
-.overlay a {
-   padding: 8px;
-   text-decoration: none;
-   font-size: 36px;
-   color: #818181;
-   display: block;
-   transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-   color: #f1f1f1;
-}
-
-.overlay .closebtn {
-   position: absolute;
-   top: 20px;
-   right: 45px;
-   font-size: 60px;
-}
 
 @media screen and (max-height: 450px) {
  .overlay a {font-size: 20px}
@@ -143,10 +63,102 @@ body {
  }
 }
 
-.card {
+.animated-search-form[type=search] {
+  width: 85%;
+  border: 0.125rem solid red;
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
+  border-radius: 0;
+ 
+  background-position: 0.625rem 0.625rem;
+  background-repeat: no-repeat;
+  padding: 0.75rem 1.25rem 0.75rem 2rem;
+  transition: width 0.4s ease-in-out;
   background-color: transparent;
+  color: white
+
+
 }
 
-.list-group-item {
+.animated-search-form[type=search]:focus {
+  width: 85%;
   background-color: transparent;
+  color: white;
+  border: 0.005rem solid red;
+
+  
+}
+
+#submitBtn{
+  border: 0.125rem solid red;
+  background-color:transparent;
+
+}
+
+#charts{
+float: right;
+position: relative;
+right: -13cm;
+top: -2cm;
+width: 14cm;
+height: 10cm;
+background-color: transparent; 
+}
+
+#crossfade {
+  position:relative;
+
+} 
+
+.one, .two, .three, .four{
+
+  height: 5cm;
+  width: 5cm;
+}
+
+.five, .six, .seven, .eight{
+  height: 5cm;
+  width: 5cm;
+}
+
+#crossfade {
+  position: relative;
+}
+
+#crossfade img {
+	position: absolute;
+}
+
+#crossfade img {
+  position:absolute;
+  left:0;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+#crossfade img.top:hover {
+  opacity:0;
+}
+
+#youtubeBtn{
+
+  width: 35%;
 }

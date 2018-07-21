@@ -15,33 +15,40 @@
 
 </head>
 
-<body id="body">
+<body id="body" background="assets/images/free-headphones-wallpaper-1.jpg">
 
     <div class="jumbotron-2" id="jumbo1" >
         <div class="container">
-            <h1 class="display-4">Tri Dev   <img src="assets/images/red_note (2).png" </h1>
+            <h1 class="display-4">Tri Dev   <img src="assets/images/imageedit_18_7691921047.png" id="pic" </h1>
         </div> 
     </div>
     <div class="jumbotron-2" id="jumbo2" >
-            <h2 class="lead" id="jumbo2_text" >Connect with Lyrics & Music!</h2>
-            <span id="nav" style="font-size:25px;cursor:pointer" onclick="openNav()" class="fas fa-chevron-circle-down">
-                         Menu
-            </span>
-        
+            <h2 class="lead" id="jumbo2_text" >Connect with Lyrics & Music!</h2> 
     </div> 
-    <div class="input-group mb-3">
-        <input id="inputSearch" type="text" class="form-control" placeholder="artist name" aria-label="artist name" aria-describedby="button-addon2">
-        <div class="input-group-append">
+            <iframe id="charts" src="https://www.billboard.com/charts/hot-100"></iframe>
+
+           <!-- <div id="crossfade" class="shadow">
+                <img class="one" src="assets/images/bruno.jpg" />
+                <img class="two" src="assets/images/drake.jpg" />
+               <img class="three" src="assets/images/Beyonce-JAY-Z.jpg" />
+                <img class="four" src="assets/images/cardi.jpg" />
+                <img class="five" src="assets/images/grande.jpg" />
+                <img class="six" src="assets/images/maroon5.jpg" />
+                <img class="seven" src="assets/images/swift.jpg" />
+                <img class="eight" src="assets/images/ken.jpeg" />
+            </div> -->
+              
+
+
+    <div class="input-group mb-3"> 
+       <input type="search" id="inputSearch" name="search" placeholder="artist name" class="animated-search-form">
+    <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button" id="submitBtn"> search </button>
-    </div>
+   </div>
    </div>
 
-    
-
-<div class="card" style="width: 18rem; background-color: transparent;">
-    <ul class="list-group list-group-flush" style="background-color: transparent;" id="list-group">
-     </ul>
-  </div>
+    <ul class="list-group list-group-flush" style="background-color: transparent;" id="list-group"> </ul>
+ 
 
 
 
